@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Priyank Shah | Project Manager & Delivery Lead</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #2563eb;
+      --slate-900: #0f172a;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --border: #e2e8f0;
+      --accent: #0284c7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: var(--slate-700);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+      overflow: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+      color: #ffffff;
+      padding: 48px;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .header-text h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+      color: #ffffff;
+    }
+
+    .header-text h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #93c5fd;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    .tagline {
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.9rem;
+      color: #e2e8f0;
+    }
+
+    .contact-info a {
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .contact-info a:hover {
+      color: #93c5fd;
+    }
+
+    .profile-photo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid rgba(255, 255, 255, 0.2);
+      object-fit: cover;
+      flex-shrink: 0;
+      background-color: #1e293b;
+    }
+
+    .main-content {
+      padding: 44px 48px;
+    }
+
+    section {
+      margin-bottom: 36px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h3.section-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    p.summary {
+      font-size: 0.98rem;
+      color: var(--slate-700);
+      text-align: justify;
+    }
+
+    /* Badges */
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .badge {
+      background-color: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 16px;
+    }
+
+    .skill-card {
+      background: var(--slate-50);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 0.9rem;
+    }
+
+    .skill-card strong {
+      display: block;
+      color: var(--slate-900);
+      margin-bottom: 4px;
+      font-size: 0.92rem;
+    }
+
+    /* Experience */
+    .timeline-item {
+      margin-bottom: 28px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .company-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--slate-900);
+    }
+
+    .date-location {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--slate-600);
+      white-space: nowrap;
+    }
+
+    .role-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    ul.bullets {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    ul.bullets li {
+      font-size: 0.92rem;
+      margin-bottom: 6px;
+      color: var(--slate-700);
+    }
+
+    .sub-role {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border);
+    }
+
+    /* Education */
+    .education-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .education-item h4 {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--slate-900);
+    }
+
+    .education-item span {
+      font-size: 0.88rem;
+      color: var(--slate-600);
+    }
+
+    /* Print styling */
+    @media print {
+      body {
+        background-color: #fff;
+        padding: 0;
+      }
+      .container {
+        border: none;
+        box-shadow: none;
+        max-width: 100%;
+      }
+      header {
+        background: #fff;
+        color: #000;
+        border-bottom: 2px solid #000;
+        padding: 0 0 20px 0;
+      }
+      .header-text h1 { color: #000; }
+      .header-text h2, .role-title { color: #333; }
+      .tagline, .contact-info, .contact-info a { color: #555; }
+      .main-content { padding: 20px 0; }
+      .badge { border: 1px solid #ccc; color: #000; }
+      .skill-card { background: transparent; border: 1px solid #ccc; }
+    }
+
+    /* Responsive */
+    @media (max-width: 650px) {
+      .header-content {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+      }
+      .job-header, .education-item {
+        flex-direction: column;
+      }
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      .main-content, header {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="header-content">
+        <div class="header-text">
+          <h1>Priyank Shah</h1>
+          <h2>Project Manager | Delivery Lead</h2>
+          <div class="tagline">Agile &amp; Waterfall Delivery | AI Prototyping &amp; Workflow Automation | Enterprise Software</div>
+          <div class="contact-info">
+            <span>Ahmedabad, India</span>
+            <span>+91 97243 19524</span>
+            <a href="mailto:pgshah08@gmail.com">pgshah08@gmail.com</a>
+            <a href="https://www.linkedin.com/in/priyankshah1908/" target="_blank" rel="noopener">LinkedIn Profile</a>
+          </div>
+        </div>
+        <!-- To add your photo, upload 'profile.jpg' to your GitHub repo and update src -->
+        <img class="profile-photo" src="profile.jpg" alt="Priyank Shah" onerror="this.style.display='none'">
+      </div>
+    </header>
+
+    <div class="main-content">
+      <!-- Professional Summary -->
+      <section>
+        <h3 class="section-title">Professional Summary</h3>
+        <p class="summary">
+          Results-driven Project Manager &amp; Delivery Leader with 16+ years of total tech experience driving end-to-end software development lifecycles across enterprise solutions, cloud platforms, and complex multi-system integrations. Google Certified Project Manager and Generative AI specialist with hands-on expertise building MVPs/POCs via Claude and Google AI Studio and automating PMO operations across major AI platforms (ChatGPT, Gemini, NotebookLM). Proven in managing cross-functional technical teams and optimizing delivery processes by 50%.
+        </p>
+      </section>
+
+      <!-- Certifications -->
+      <section>
+        <h3 class="section-title">Certifications</h3>
+        <div class="badges">
+          <span class="badge">Google Project Management</span>
+          <span class="badge">Google Generative AI for Project Managers</span>
+          <span class="badge">Scrum Master Certified</span>
+        </div>
+      </section>
+
+      <!-- Core Competencies -->
+      <section>
+        <h3 class="section-title">Core Competencies</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <strong>AI Prototyping &amp; Automation</strong>
+            Rapid MVP &amp; POC Development (Claude, Google AI Studio), AI Platforms (ChatGPT, Gemini, NotebookLM), Automated MoMs, Action Item Tracking &amp; Follow-ups, Executive Presentations &amp; Documentation
+          </div>
+          <div class="skill-card">
+            <strong>Project Management</strong>
+            Agile (Scrum/Kanban), Waterfall, Sprint Planning, Risk &amp; Issue Mitigation, Project Budgeting &amp; Scope
+          </div>
+          <div class="skill-card">
+            <strong>Tools &amp; Frameworks</strong>
+            JIRA, Confluence, HP ALM, Bamboo, Postman, Selenium, Git, Bitbucket, TFS
+          </div>
+          <div class="skill-card">
+            <strong>Stakeholder Management</strong>
+            Client Relationship Management, Vendor Coordination, UAT Delivery, Cross-Functional Team Leadership
+          </div>
+          <div class="skill-card">
+            <strong>Platforms &amp; Architectures</strong>
+            Salesforce, ServiceNow, Apttus (CPQ/CLM/Billing), Enterprise SaaS
+          </div>
+          <div class="skill-card">
+            <strong>Technical QA &amp; Quality Control</strong>
+            STLC, Test Strategy, Accessibility (WCAG 2.0), API Testing, Continuous Deployment
+          </div>
+        </div>
+      </section>
+
+      <!-- Professional Experience -->
+      <section>
+        <h3 class="section-title">Professional Experience</h3>
+
+        <!-- AltaDX -->
+        <div class="timeline-item">
+          <div class="job-header">
+            <span class="company-title">AltaDX (formerly DXFactor)</span>
+            <span class="date-location">Jan 2025 – Present | Ahmedabad, India</span>
+          </div>
+          <div class="role-title">Project Manager</div>
+          <ul class="bullets">
+            <li>Led a 7-month digital transformation for a multi-location fitness club chain (CA-to-Exerp platform migration), coordinating five custom applications — mobile apps, Online Join portal, In-Gym Sales, Front Desk Kiosk, and Check-In — to a go-live with zero schedule slip.</li>
+            <li>Scaled AltaDX's OMAP® AI agent implementation tracking across 12 client accounts, designing an automation framework of 11 workflow rules that eliminated manual status follow-up.</li>
+            <li>Built rapid MVPs and Proofs of Concept (POCs) leveraging Claude and Google AI Studio to validate solution architecture prior to engineering sprints.</li>
+            <li>Automated Minutes-of-Meeting production and action-item tracking across 14 client accounts using Fireflies and Claude, removing manual notetaking from every weekly client sync.</li>
+            <li>Managed cross-functional engineering teams, ensuring schedule compliance, resource optimization, and proactive risk mitigation.</li>
+            <li>Built a full-stack project health dashboard (React Vite, Node) aggregating live Jira, Keka, and Confluence data, giving management real-time visibility across all active AltaDX projects.</li>
+          </ul>
+
+          <div class="sub-role">
+            <div class="job-header">
+              <span class="role-title" style="margin-bottom: 6px;">QA Manager</span>
+              <span class="date-location">Jan 2024 – Dec 2024</span>
+            </div>
+            <ul class="bullets">
+              <li>Directed QA delivery across 7 concurrent streams, reducing production incidents by 50%.</li>
+              <li>Mapped operational gaps across 3 business functions, eliminating a delivery bottleneck that was costing 2 additional days per release cycle.</li>
+              <li>Recruited and mentored a QA team, scaling headcount from 4 to 7 within 8 months to support company growth.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Crest Data Systems -->
+        <div class="timeline-item">
+          <div class="job-header">
+            <span class="company-title">Crest Data Systems</span>
+            <span class="date-location">Apr 2021 – Jul 2023 | Ahmedabad, India</span>
+          </div>
+          <div class="role-title">QA Lead</div>
+          <ul class="bullets">
+            <li>Led Quality Engineering efforts across complex integrations built on the ServiceNow platform for enterprise clients.</li>
+            <li>Acted as quality gatekeeper for system integration, WCAG 2.0 accessibility compliance, and code migration to ensure 24/7 system availability.</li>
+            <li>Configured Bamboo continuous deployment pipelines for source code repositories, improving build reliability.</li>
+          </ul>
+        </div>
+
+        <!-- Apttus India -->
+        <div class="timeline-item">
+          <div class="job-header">
+            <span class="company-title">Apttus India</span>
+            <span class="date-location">Nov 2016 – Mar 2021 | Ahmedabad, India</span>
+          </div>
+          <div class="role-title">QA Lead</div>
+          <ul class="bullets">
+            <li>Managed end-to-end quality validation for Apttus Middle Office SaaS products (CPQ, CLM, Billing, Revenue).</li>
+            <li>Designed custom data formatting templates across tracking platforms.</li>
+            <li>Traveled to international client sites as a designated "Problem Fixer" to conduct requirements workshops, align business stakeholders, and drive 5 major UAT releases.</li>
+          </ul>
+        </div>
+
+        <!-- Infostretch Corporation -->
+        <div class="timeline-item">
+          <div class="job-header">
+            <span class="company-title">Infostretch Corporation</span>
+            <span class="date-location">Jul 2013 – Jul 2016 | Ahmedabad, India</span>
+          </div>
+          <div class="role-title">Quality Assurance Lead</div>
+          <ul class="bullets">
+            <li>Served on the Software Engineering Process Group (SEPG) to maintain ISO/CMMI QMS compliance across the enterprise.</li>
+            <li>Authored master test plans, schedules, and resource estimates for concurrent client projects.</li>
+          </ul>
+        </div>
+
+        <!-- Allscripts India LLC -->
+        <div class="timeline-item">
+          <div class="job-header">
+            <span class="company-title">Allscripts India LLC</span>
+            <span class="date-location">May 2011 – Jul 2013 | Vadodara, India</span>
+          </div>
+          <div class="role-title">Software Quality Engineer</div>
+          <ul class="bullets">
+            <li>Managed direct client communications, functional requirement scope specifications, and provided shift support to US healthcare clients.</li>
+          </ul>
+        </div>
+
+        <!-- Patni Computer / StayInFront / Shah Pvt. Ltd. -->
+        <div class="timeline-item">
+          <div class="job-header">
+            <span class="company-title">Patni Computer / StayInFront / Shah Pvt. Ltd.</span>
+            <span class="date-location">Jul 2008 – Apr 2011 | India</span>
+          </div>
+          <div class="role-title">Software Test Engineer Roles</div>
+          <ul class="bullets">
+            <li>Executed functional, SQL database, and regression testing across enterprise CRM and custom applications.</li>
+          </ul>
+          <p style="font-size: 0.85rem; color: var(--slate-600); font-style: italic; margin-top: 4px;">
+            (Note: Prior early-career Software Engineering / QA roles [2007–2008] available upon request)
+          </p>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section>
+        <h3 class="section-title">Education</h3>
+        <div class="education-item">
+          <div>
+            <h4>Bachelor of Engineering (B.E.) – Information Technology</h4>
+            <span>Gujarat University, India</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</body>
+</html>
